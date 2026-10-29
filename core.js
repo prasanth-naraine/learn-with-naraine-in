@@ -14,4 +14,9 @@ document.querySelectorAll(
     element.setAttribute('data-aos-once', 'false');
 });
 
+document.querySelectorAll('a').forEach(atagP => {
+    atagP.setAttribute('rel', 'noopener noreferrer');
+    atagP.setAttribute('target', '_blank');
+});
+
 AOS.init();

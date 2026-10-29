@@ -15,7 +15,26 @@
 
 </head>
 
-<body></body>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="./linux-networking.html">Linux-Networking-Hardwares</a>
+        <a href="./git-remote.html">Version-Remote</a>
+        <a href="./html-css-js.html">HCJ</a>
+        <a href="./react-node-next-express.html">JS-World</a>
+        <a href="./dbms.html">DBMS</a>
+        <a href="./clouds.html">Cloud</a>
+        <a href="./py-django-dsa.html">Py-Dsa</a>
+        <a href="./api-browsers.html">API-Browsers</a>
+        <a href="./words-idioms.html">Words-Idioms</a>
+        <a href="./qa-agile-interview.html">Testing-Agile-Office</a>
+    </div>
+    <!-- Navbar Adjuster -->
+    <div class="navbar-adjuster"></div>
+
+</body>
 <!-- js  -->
 <script src="./core.js"></script>
 <script src="./aos.js"></script>
