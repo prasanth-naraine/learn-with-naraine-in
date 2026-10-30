@@ -85,7 +85,8 @@ body {
     border-right: 1px solid var(--black);
 }
 
-.navbar a:hover {
+.navbar a:hover,
+.navbar a.active {
     background: var(--black);
     color: var(--white);
 }
@@ -135,6 +136,8 @@ body {
     font-size: 2rem;
     font-weight: 600;
     line-height: 1.1;
+    border-bottom: 1px solid var(--black);
+    padding-bottom: 1rem;
 }
 
 .info-section-common span {
@@ -165,7 +168,7 @@ body {
     font-size: 1.5rem;
     font-weight: 600;
     padding-left: 1rem;
-    border-left: 2px solid var(--black);
+    border-left: 1px solid var(--black);
 }
 
 @media screen and (max-width: 1700px) {
@@ -192,11 +195,11 @@ body {
 
 
     .info-section-common h1 {
-        font-size: 1.5rem;
+        font-size: 1.35rem;
     }
 
     .info-section-common h6 {
-        font-size: 1.25rem;
+        font-size: 1rem;
     }
 
     .info-section-common p,
