@@ -59,7 +59,87 @@
         <p>
         </p>
 
-        <h6></h6>
+        <h6>
+            Python Installation
+        </h6>
+        <ul>
+            <li>
+                Python 3.0 released on 03-12-2008 which is around 18 years
+            </li>
+            <li>
+                sudo apt install python3 && python3 --version or -V
+            </li>
+            <li>
+                Latest Apt stable Version is Python 3.12.3 [as of 30-10-2026]
+                <br>
+                3.X.X - Major Version Release
+                <br>
+                X.12.X - Minor Releases or Feature release within the major version
+                <br>
+                X.X.3 - Patch release or bug fix release inside the minor release
+            </li>
+            <li>
+                sudo apt install python3-pip python3-venv -y
+            </li>
+            <li>
+                pip means pip installs packages for python | standard package manager for python
+            </li>
+            <li>
+                python3 -m venv --help | If the list is shown venv is installed
+            </li>
+            <li>
+                python3 -m pip --version or pip --version or pip -V | To check pip version
+            </li>
+            <li>
+                python3 -m venv venv-naraine | create virtual environment in your <span>backend folder</span>
+            </li>
+            <li>
+                pip install package-name | global installation
+            </li>
+            <li>
+                What if i want to install package inside a specific project folder | first create a virtual environment
+                & what ever install stays inside the folder.
+                <br>
+                The role of -m: Running python -m pip install package-name makes sure that if you have a
+                project-specific
+                environment activated, the package goes there and doesn't leak into your global system files.
+                <br>
+                If you run pip install without activating your virtual environment (venv), the package will be
+                installed globally on your system, completely bypassing your project environment.
+            </li>
+            <li>
+                Activate the virtual environment -> source venv-naraine/bin/activate -> (venv-folder-name) will be
+                visible -> deactivate to kill the venv running
+            </li>
+        </ul>
+
+        <img src="./py/py1.png" alt="">
+
+        <ul>
+            <li>
+                 python3 -m pip install django && pip show django | Installing django
+            </li>
+            <li>
+                pip freeze -> Generating environment snapshots (requirements.txt) | package==version | pip install -r requirements.txt -> we can install multiple package inside a single file
+            </li>
+            <li>
+                pip list -> just printing the installed packages inside terminal
+            </li>
+        </ul>
+
+        <img src="./py/py2.png" alt="">
+
+        <ul>
+            <li>
+                django-admin startproject be . | create an admin backend  
+            </li>
+            <li>
+                create a requirements.txt file inside /lms/be | list all packages==version format inside requirements.txt file
+            </li>
+            <li>
+                if venv is activated no need to type python3 -m => pip install -r requirements.txt
+            </li>
+        </ul>
 
     </div>
 </body>

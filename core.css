@@ -45,7 +45,13 @@ body {
     /* min-height: 500dvh; */
     background: var(--charlie);
     max-width: 100%;
-    padding-bottom: 3rem;
+    padding-bottom: 4rem;
+}
+
+@media screen and (width <=800px) {
+    body {
+        padding-bottom: 3rem;
+    }
 }
 
 /* -------------------------- */
@@ -149,6 +155,7 @@ body {
     min-width: 100%;
     object-fit: cover;
     object-position: 0% 0%;
+    border: 2px solid var(--black);
 }
 
 .info-section-common p {
@@ -162,6 +169,10 @@ body {
 .info-section-common ul li {
     font-size: 1.25rem;
     margin-bottom: 1rem;
+}
+
+.info-section-common ul li:last-child{
+    margin-bottom: 0;
 }
 
 .info-section-common h6 {
@@ -289,6 +300,12 @@ body {
 .home-01 h2 span {
     font-weight: 600;
     font-size: inherit;
+}
+
+@media screen and (max-width: 1700px) {
+    .home-01 h2 {
+        max-width: 80%;
+    }
 }
 
 @media screen and (width<=800px) {
