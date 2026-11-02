@@ -27,6 +27,15 @@
 
 <body>
 
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Type a word to search...">
+        <button onclick="performSearch()">Search</button>
+        <button onclick="prevMatch()" title="Previous Match">&lt;</button>
+        <button onclick="nextMatch()" title="Next Match">&gt;</button>
+        <button onclick="clearHighlights()">Clear</button>
+        <span id="searchStatus" style="font-size: 14px; color: #666;"></span>
+    </div>
+
     <!-- Navbar -->
     <div class="navbar">
         <a href="./">Home</a>
@@ -53,7 +62,7 @@
 
     <div class="info-section-common">
         <h1>
-            QA, Agile, Interview, Etiquettes
+            QA, Agile, Interview, Etiquettes, General
         </h1>
 
         <h6>
@@ -68,7 +77,9 @@
             Our Feed is not our tastes but also our triggers?
         </h6>
         <p>
-            When we want to do something -> we see people achieving more success at our age. Its called personalization. We eventually do doomscrolling [more bad news consuming through scrolling] ended up with a rabbit hole [deep research on topics which is different from your start].
+            When we want to do something -> we see people achieving more success at our age. Its called personalization.
+            We eventually do doomscrolling [more bad news consuming through scrolling] ended up with a rabbit hole [deep
+            research on topics which is different from your start].
         </p>
         <p>
             Busy !== Productive
@@ -78,15 +89,763 @@
             If Interviewers ask what you can do which AI cannot?
         </h6>
         <p>
-            Ownership & Accoutable - most importantly no AI companies will takes the blame if a breach happens 
+            Ownership & Accoutable - most importantly no AI companies will takes the blame if a breach happens
             <br>
             Cost!
         </p>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Voice Modulation & Speaking Dynamics</h6>
+        <ul>
+            <li><span>Tone & Pitch</span> - People tend to vote for or trust individuals who speak in a lower, confident
+                voice.</li>
+            <li><span>Filler Words</span> - Avoid filler words (like "um", "uh", "you know") to maintain authority and
+                clarity.</li>
+            <li><span>Strategic Pauses</span> - Pausing at the right times makes the audience more engaged and
+                demonstrates that you have full control of the room.</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Vocal Warm-up Exercises</h6>
+        <ul>
+            <li><span>Deep Breathing Reset</span> - Stand up > Stretch arms up > Deep breath in > Exhale all air
+                completely > Bring arms down.</li>
+            <li><span>Lip Pops</span> - Repeat "BOB BOB BOB" to loosen the lips.</li>
+            <li><span>Lip Trills</span> - Vibrate lips together ("Brrrrrrrr") to release facial tension.</li>
+            <li><span>Tongue Taps</span> - Repeat "La la la" to improve articulation and agility.</li>
+            <li><span>Tongue Trills</span> - Create a engine-like sound ("Truuuuuuuu") to warm up the tongue and palate.
+            </li>
+            <li><span>Pitch Scaling (WEU)</span> - Vocalize "WEU" (W at a high pitch, E at medium pitch, U at a lower
+                tone) to expand dynamic vocal range.</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Skill Acquisition (Josh Kaufman Principles)</h6>
+        <ul>
+            <li><span>Josh Kaufman</span> - Renowned author and professional speaker (author of <i>The First 20
+                    Hours</i> and <i>The Personal MBA</i>).</li>
+            <li><span>Rapid Skill Acquisition (20-Hour Rule)</span> - You can become reasonably good at a new skill with
+                20 hours of deliberate, focused practice, rather than needing 10,000 hours right away.</li>
+            <li><span>10,000 Hours Metric</span> - Malcolm Gladwell's 10,000-hour rule is for world-class mastery (~5
+                years of full-time work), not basic competence.</li>
+            <li><span>The Learning Barrier</span> - The emotional barrier of "feeling stupid" at the beginning is the
+                main thing that stops people from learning new skills.</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Non-verbal, Adages & Life Wisdom</h6>
+        <ul>
+            <li><span>Success Defined</span> - Working towards a predetermined goal while consciously knowing your
+                direction.</li>
+            <li><span>Discipline & Clarity</span> - Success never comes without discipline; clarity directly generates
+                value and earnings.</li>
+            <li><span>Rule of Three for Trust</span> - No person is consistently good three times; observe at least
+                three separate instances to truly evaluate character.</li>
+            <li><span>Focus on the Next Move</span> - Regardless of age or current status, your next action is what
+                defines your path.</li>
+            <li><span>Walking Away</span> - Real strength is having the courage to walk away from someone who
+                disrespects you, even if you love them.</li>
+            <li><span>Desperation Rule</span> - Money, relationships, and power continuously flee from a desperate
+                person.</li>
+            <li><span>Learning Philosophy</span> - Tell me and I forget, teach me and I remember, involve me and I
+                learn.</li>
+            <li><span>Open-Ended Questions</span> - Ask open-ended questions instead of yes/no questions to truly
+                understand a person.</li>
+            <li><span>Present Moment</span> - If you need background music at the beach, you are missing the raw beauty
+                of the environment.</li>
+            <li><span>Borrowing Etiquette</span> - Always return a borrowed car or bike with a full tank of fuel.</li>
+            <li><span>Execution Speed</span> - Slow is smooth, and smooth is fast.</li>
+            <li><span>Total Commitment</span> - Play with absolute passion or do not play at all.</li>
+            <li><span>Handshake Etiquette</span> - Never shake someone's hand while sitting down.</li>
+            <li><span>Managing Anger</span> - After drafting an angry email, read it carefully and then delete it.</li>
+            <li><span>Leadership by Example</span> - Lead by example in all things, not merely through explanation.</li>
+            <li><span>Answering "Why"</span> - "Why" is the hardest question to answer; mastering it signals true
+                expertise in your field.</li>
+            <li><span>Quiet Power</span> - Amateurs seek the spotlight and get consumed; true power operates discreetly
+                in the background.</li>
+            <li><span>Discretion</span> - Real success lies in what is kept hidden rather than what is displayed;
+                keeping secrets requires discipline.</li>
+            <li><span>True Bravery & Motivation</span> - Faking bravery when terrified is real bravery; executing tasks
+                when unmotivated is real motivation.</li>
+            <li><span>Handling Invitations</span> - Ignore last-minute invitations or events you were not explicitly
+                invited to without asking questions.</li>
+            <li><span>Consistency</span> - Consistency is a rare trait that not everyone can sustain.</li>
+            <li><span>Indecision Rule</span> - If you cannot decisively say yes, the answer is automatically no.</li>
+            <li><span>Self-Reflection</span> - Engaging in an internal argument with yourself is the essence of deep
+                poetry and thought.</li>
+            <li><span>Knowing When to Leave</span> - A good dancer knows when to exit the stage, just as an employee
+                knows when to transition out.</li>
+            <li><span>Fear of the Unknown</span> - People only fear what they do not fully understand.</li>
+            <li><span>Importance of Feedback</span> - Silence is not good feedback; leaders must actively provide
+                actionable feedback.</li>
+            <li><span>Discreet Boundaries</span> - Do not ask questions if you are unprepared for the answers; learn to
+                agree to disagree.</li>
+            <li><span>Evaluating Relationships</span> - Not everyone you fight with is an enemy, and not everyone who
+                helps you is a friend.</li>
+            <li><span>Commitment & Consistency</span> - Without commitment, you will never start; without consistency,
+                you will never finish (Denzel Washington).</li>
+            <li><span>Facing Resistance</span> - Resistance often appears when you are making real progress toward
+                meaningful goals.</li>
+            <li><span>Character Tests</span> - A man's character is tested by granting him power; a woman's character is
+                tested by granting her complete freedom.</li>
+            <li><span>Dining Etiquette</span> - Never criticize the food when you are a guest; never take the last
+                portion if you did not contribute to or buy the meal.</li>
+            <li><span>Personal Presentation</span> - Dress well for every occasion and avoid posing with alcohol or
+                cigarettes.</li>
+            <li><span>Taking Action</span> - The best time to plant a tree was years ago; the next best time is right
+                now.</li>
+            <li><span>Perspective on Life</span> - Life is a tragedy in close-up, but a comedy in a long-shot (Charlie
+                Chaplin).</li>
+            <li><span>Genius Formula</span> - Genius is 1% inspiration and 99% perspiration (Thomas Edison).</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Behavioral Observations & Body Language</h6>
+        <ul>
+            <li><span>Hands in Pockets</span> - Signals low confidence or defensiveness.</li>
+            <li><span>Avoiding Eye Contact</span> - Indicates nervousness, guilt, or lack of focus.</li>
+            <li><span>Overly Dramatic Behavior</span> - Often used as a front to compensate for internal weaknesses.
+            </li>
+            <li><span>Erratic Voice Pitch</span> - Inconsistent tone pitch typically signals fabricated stories or
+                deceit.</li>
+            <li><span>Instant Engagement</span> - Quickly engaging others in conversation indicates self-assurance and
+                boldness.</li>
+            <li><span>Excessive Grooming</span> - Frequently reflects insecurity about appearance and self-presentation.
+            </li>
+            <li><span>Slouched Posture</span> - Mirrors low energy or a defensive mental state.</li>
+            <li><span>Constant Criticism</span> - Usually stems from deep-seated personal insecurity.</li>
+            <li><span>Controlled Eye Blinking</span> - Maintaining steady gaze without excessive blinking enhances
+                presence and holds audience engagement (e.g., Michael Caine).</li>
+            <li><span>Habit Loop</span> - Habits consist of a trigger, routine/pattern, and reward; control the routine
+                to transform the outcome.</li>
+            <li><span>Emotional Control</span> - A quick temper often reflects a lack of emotional intelligence.</li>
+            <li><span>Workplace Discretion</span> - Limit over-articulating, refrain from sharing personal details,
+                avoid office gossip, and do not disclose side income or freelancing projects.</li>
+            <li><span>Conflict Resolution</span> - Smile and move past controversial topics calmly.</li>
+            <li><span>Post-Resignation Boundaries</span> - Avoid seeking personal favors from colleagues after leaving a
+                company.</li>
+            <li><span>Senior Leadership Style</span> - Offer clear options rather than rigid commands.</li>
+            <li><span>Strategic Deception</span> - Appear weak when you are strong, and strong when you are weak (Sun
+                Tzu).</li>
+            <li><span>Single-Minded Focus</span> - A man who chases two rabbits catches neither.</li>
+            <li><span>Creative Adaptation</span> - Good artists copy, great artists steal (Pablo Picasso).</li>
+            <li><span>Transactional Reality</span> - Pragmatic global and corporate relations run on mutual benefit, not
+                sentiment or gratitude.</li>
+            <li><span>Focused Execution</span> - To break down a wall, concentrate all effort on one brick at a time.
+            </li>
+            <li><span>Value Delivery</span> - Companies pay for measurable results, not just hours of effort.</li>
+            <li><span>Visual Reminders</span> - Writing tasks on visible sticky notes significantly boosts completion
+                rates.</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Corporate Laws & Mental Models</h6>
+        <ul>
+            <li><span>Gilbert's Law</span> - The biggest workplace challenge is that no one tells you exactly what to
+                do; defining the "Why" before the "How" is your responsibility.</li>
+            <li><span>Murphy's Law</span> - Anything that can go wrong, will go wrong.</li>
+            <li><span>Wilson’s Law</span> - When you prioritize knowledge and intelligence in every situation, financial
+                rewards naturally follow.</li>
+            <li><span>Kidlin’s Law</span> - If you can write out a problem clearly on paper, it is already half solved.
+            </li>
+            <li><span>Falkland’s Law</span> - When you do not have to make a decision, the best decision is often to
+                make no decision at all.</li>
+            <li><span>Hick's Law</span> - Limiting choice options allows users to make decisions significantly faster.
+            </li>
+            <li><span>Miller's Law</span> - The average human memory can hold roughly 7 (± 2) items at a time, which
+                shapes optimal UI item limits.</li>
+            <li><span>Pareto Principle</span> - 80% of total outcomes result from 20% of core inputs or efforts.</li>
+            <li><span>Feynman Technique</span> - Learn a concept by explaining it simply to a beginner, identifying
+                gaps, and refining until effortless.</li>
+            <li><span>Prisoner's Dilemma</span> - A standard game theory model showing why two parties might not
+                cooperate, even when it is in their best interest to do so.</li>
+            <li><span>Pickle Jar Theory</span> - Prioritize major, high-impact tasks (large rocks) before filling your
+                schedule with small distractions (sand).</li>
+            <li><span>Red Car Theory</span> - Once your mind tunes into a specific focus (like a red car), you begin
+                noticing opportunities everywhere.</li>
+            <li><span>Rubber Duck Debugging</span> - Solving complex technical or logic problems by explaining the code
+                line-by-line to an inanimate object.</li>
+            <li><span>Dead Horse Theory</span> - Stop investing resources into a failed strategy; pivot when progress
+                has halted completely.</li>
+            <li><span>ECS Model</span> - Exclusiveness, Creativity, and Sales drive corporate value expectations.</li>
+            <li><span>Nash Equilibrium</span> - Competing businesses naturally cluster together in space or strategy to
+                maximize shared user traffic.</li>
+            <li><span>Tactics vs. Strategy</span> - Strategy defines "Why" (goals/vision); Tactics define "How"
+                (execution/tools). Strategy must always precede tactics.</li>
+            <li><span>Culture Eats Strategy for Breakfast</span> - An outstanding strategic plan will fail if the
+                organization's workplace culture is broken (Peter Drucker).</li>
+            <li><span>Negotiation Rule</span> - Never make the opening offer in a negotiation; let the other party state
+                their baseline first.</li>
+            <li><span>Product Rule in Sales</span> - If a service is free, your attention or data is the product being
+                sold.</li>
+            <li><span>Brand Definition</span> - Your brand is what people say about you when you leave the room (Jeff
+                Bezos).</li>
+            <li><span>Mindspace Branding</span> - True branding is the mental footprint you occupy in the customer's
+                mind.</li>
+            <li><span>UX Rule</span> - If a software application requires a lengthy instruction manual, its design needs
+                simplification.</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>3-3-3 Grounding Rule for Workplace Anxiety</h6>
+        <ul>
+            <li><span>The Anxiety Reaction</span> - Under high stress, the brain enters fight-or-flight mode, causing
+                focus to drop as the prefrontal cortex goes offline.</li>
+            <li><span>Step 1 (Listen)</span> - Close your eyes for 1 minute and focus calmly on 3 distinct sounds around
+                you.</li>
+            <li><span>Step 2 (Observe)</span> - Open your eyes and visually examine 3 physical objects on your desk,
+                noting their colors and shapes.</li>
+            <li><span>Step 3 (Touch)</span> - Physically touch those 3 objects to feel their texture, weight, and
+                temperature.</li>
+            <li><span>Biological Outcome</span> - This grounding exercise shifts your nervous system from sympathetic
+                (stress) to parasympathetic (rest and digest), restoring focus and composure.</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Interview Timing & Negotiation Strategy</h6>
+        <ul>
+            <li><span>Best Months</span> - January to March (Good) and April to June (Best, right after annual hikes).
+            </li>
+            <li><span>Moderate Months</span> - July to September (Decent to try).</li>
+            <li><span>Worst Months</span> - October to December (Typically worst, especially for 10+ years experience
+                due to holiday freezes).</li>
+            <li><span>Fiscal Year Advantage</span> - The first half of the fiscal year is generally the best time for
+                job hunting.</li>
+            <li><span>Competency Over Timing</span> - When you have high competency and self-confidence, the hiring
+                month matters less.</li>
+            <li><span>Interview Conversation Flow</span> - Never abruptly end a conversation during an interview; keep
+                it professional and open.</li>
+            <li><span>Indirect Time Delay</span> - Politely stall for time during offers using indirect reasons (e.g.,
+                "I want to discuss this with my family/wife first").</li>
+            <li><span>Negotiation Rule</span> - Always negotiate before signing, but once the official Offer Letter (OL)
+                is released and accepted, do not renegotiate—it is unprofessional.</li>
+            <li><span>Win-Win Principle</span> - Negotiations should always aim for a win-win situation for both
+                parties.</li>
+            <li><span>Alternative Plans</span> - Always have a fallback option or alternative plan ready when entering a
+                negotiation.</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Resume Best Practices</h6>
+        <ul>
+            <li><span>No Photos</span> - Avoid including photographs on your resume.</li>
+            <li><span>Showcase Code</span> - Add GitHub links to practically demonstrate your technical skills.</li>
+            <li><span>Action Verbs</span> - Every description bullet point should start with a strong action verb (e.g.,
+                <i>Contributed</i>, <i>Implemented</i>).
+            </li>
+            <li><span>Omit "About Me"</span> - Skip the personal summary section; the entire resume is already about
+                you.</li>
+            <li><span>Filter Hobbies</span> - Avoid listing useless or generic hobbies.</li>
+            <li><span>Avoid Predefined Templates</span> - Avoid overly complex or rigid predefined templates.</li>
+            <li><span>ATS Validation</span> - Always check your resume with an ATS (Applicant Tracking System) checker
+                before submitting.</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Cover Letter Guidelines</h6>
+        <ul>
+            <li><span>Definition</span> - A personalized document introducing you to the employer, providing context to
+                your resume, highlighting your interest, and summarizing key qualifications.</li>
+            <li><span>Length</span> - Maximum 1 page. Analogy: If resumes are full videos, cover letters are "shorts"—a
+                quick, compelling glimpse of the bigger picture.</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>What Hiring Managers Look For</h6>
+        <ul>
+            <li><span>Problem Solving</span> - What specific problem does this code solve?</li>
+            <li><span>Execution Quality</span> - How was it solved, and is the code optimized?</li>
+            <li><span>Alignment</span> - Does your background match the Job Description (JD) and company goals?</li>
+            <li><span>Strategic Positioning</span> - Avoid wrong career positioning; execute strategic job switches.
+            </li>
+            <li><span>Interview Volume</span> - Aim for at least 20 interviews per year with quality companies.</li>
+            <li><span>Revenue Focus</span> - Focus your role on how you can make money for the company rather than just
+                saving money.</li>
+            <li><span>Career Trajectory</span> - For the first 10 years, companies look for specialists (excel in one
+                deep skill); after 10 years, they look for generalists with leadership, management, and broader vision.
+            </li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Inside the Office & Leadership Dynamics</h6>
+        <ul>
+            <li><span>Attrition Benchmarks</span> - Below 10% is excellent, 10–20% is acceptable, and anything above 20%
+                is a major red flag.</li>
+            <li><span>Retention Strategy</span> - High retention and a low attrition rate are symbols of a peaceful,
+                healthy work culture.</li>
+            <li><span>Leadership Words</span> - CEO and CTO words carry immense power, reflecting company values and
+                reputation.</li>
+            <li><span>Constructive Framing</span> - Address current issues (e.g., company or project challenges) in a
+                positive, proactive manner—take responsibility to help clean it up rather than just pointing fingers.
+            </li>
+            <li><span>Start with Why</span> - Always anchor thinking, speaking, and acting starting with "Why" (the
+                purpose), then "How" (uniqueness), and finally "What" (product/service).</li>
+            <li><span>Professional Communication</span> - Avoid imperative words like "must" in an office setting as
+                they sound too forceful.</li>
+            <li><span>Structured Communication</span> - When talking to colleagues or managers, frame conversations with
+                clarity: What is this about? What do you require? What is the key message and underlying "why"?</li>
+            <li><span>Workplace Reality</span> - Pure loyalty and hard work alone do not automatically secure
+                recognition or wealth; leadership notices everything, so stay sharp and objective.</li>
+            <li><span>Protecting Ideas</span> - Great ideas get stolen if not properly safeguarded.</li>
+            <li><span>Priorities</span> - Your higher official's immediate priority supersedes your standard KRA.</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>KPI vs. KRA</h6>
+        <ul>
+            <li><span>KRA (Key Result Area)</span> - Defined by the company; represents your core job role and assigned
+                organizational targets (e.g., hiring 30 people).</li>
+            <li><span>KPI (Key Performance Indicator)</span> - Employee's plan and productivity metrics used to measure
+                performance (e.g., how much revenue each hire generates for the organization). <i>KRA comes first,
+                    followed by KPI.</i></li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Proper Office Exit Procedure</h6>
+        <ul>
+            <li><span>Steps to Leave</span> - Collect final salary and slips from HR -> Secure an offer letter with a
+                confirmed Date of Joining (DOJ) from your next employer -> Draft resignation email -> Inform your
+                manager first, then HR -> Negotiate your last working day professionally.</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Signs of an Impending Layoff</h6>
+        <ul>
+            <li><span>Red Flags</span> - New product launches or expansions paused; company mergers; missing financial
+                targets 2–3 months in a row; budget cuts; hiring freezes; structural restructuring; top managers
+                resigning; hiring external consultants.</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Email Communication Etiquette</h6>
+        <ul>
+            <li><span>"Sorry for the delay"</span> ➔ Use <i>"Thanks for your patience"</i></li>
+            <li><span>"No problem"</span> ➔ Use <i>"Always happy to help"</i></li>
+            <li><span>"When can I expect an update?"</span> ➔ Use <i>"Just wanted to check in / in need of any
+                    assistance?"</i></li>
+            <li><span>"Oh my bad, totally missed that"</span> ➔ Use <i>"Thanks for letting me know"</i></li>
+            <li><span>Subject Lines</span> - Should clearly explain the purpose of the email without requiring
+                clarifying questions.</li>
+            <li><span>Greetings</span> - Always greet the recipient warmly.</li>
+            <li><span>POA (Plan of Action)</span> - A Plan of Action or clear next steps are mandatory in all business
+                emails.</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Corporate Boundaries & Red Flags</h6>
+        <ul>
+            <li><span>Red Flag Traits in Companies</span> - Approval delays, lack of trust in employees' words,
+                egoistic/egotistical bosses, perfectionist traps, vague ideas/visions, lack of technical knowledge, or
+                24/7 support expectations.</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Google Docs Shortcuts</h6>
+        <ul>
+            <li><span>Word Count</span> - Ctrl + Shift + C</li>
+            <li><span>Copy / Paste Formatting Only</span> - Ctrl + Alt + C / V</li>
+            <li><span>Justify Text</span> - Ctrl + Shift + J</li>
+            <li><span>Voice Typing</span> - Ctrl + Shift + S</li>
+            <li><span>Numbered List / Bullet List</span> - Ctrl + Shift + 7 / Ctrl + Shift + 8</li>
+            <li><span>Move Line Up / Down</span> - Shift + Alt + Up / Down Arrow</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Google Sheets Shortcuts</h6>
+        <ul>
+            <li><span>Insert New Worksheet</span> - Shift + Fn + F11 (Note: Shift + F11 inserts a new worksheet; a new
+                workbook is Ctrl + N).</li>
+            <li><span>Switch Worksheets</span> - Ctrl + Page Up / Page Down (Note: Alt + Up / Down Arrow opens drop-down
+                lists in cells).</li>
+            <li><span>Select Entire Column</span> - Ctrl + Spacebar</li>
+            <li><span>Select Entire Row</span> - Shift + Spacebar</li>
+            <li><span>Insert Rows / Columns</span> - Alt + I + R (Rows) / Alt + I + C (Columns)</li>
+            <li><span>Delete Cell / Row / Column</span> - Alt + E + D</li>
+            <li><span>Text Alignment</span> - Ctrl + Shift + E (Center) / L (Left) / R (Right)</li>
+            <li><span>Move to First / Last Cell</span> - Ctrl + Home / Ctrl + End</li>
+            <li><span>File Menu</span> - Alt + F</li>
+            <li><span>Edit Menu</span> - Alt + E</li>
+            <li><span>View Menu</span> - Alt + V</li>
+            <li><span>Insert Menu</span> - Alt + I</li>
+            <li><span>Data Menu</span> - Alt + D</li>
+            <li><span>Select to End of Row / Column</span> - Select cell > Ctrl + Shift + Arrow Key</li>
+            <li><span>Edit Cell</span> - F2</li>
+            <li><span>Format Options Menu</span> - Alt + O</li>
+            <li><span>Format Alignment</span> - Alt + O + A</li>
+            <li><span>Text Wrapping</span> - Alt + O + W</li>
+            <li><span>Spell Check</span> - Alt + T + S (or F7)</li>
+            <li><span>Line Break Inside Cell</span> - Alt + Enter</li>
+            <li><span>Freeze Panes</span> - Alt + V + F</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Google PowerPoint Shortcuts</h6>
+        <ul>
+            <li><span>Increase / Decrease Font Size</span> - Ctrl + Shift + > / << /li>
+            <li><span>Insert New Slide</span> - Ctrl + M</li>
+            <li><span>Duplicate Selected Slide</span> - Ctrl + D</li>
+            <li><span>Zoom In / Zoom Out</span> - Ctrl + Alt + Plus (+) / Minus (-)</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Geography & Earth Basics</h6>
+        <ul>
+            <li><span>Shape of Earth</span> - Oblate Spheroid (bulged at the equator, slightly flat at the poles).</li>
+            <li><span>Latitudes</span> - Horizontal imaginary lines that separate temperature zones.</li>
+            <li><span>Longitudes</span> - Vertical imaginary lines that separate time zones.</li>
+            <li><span>Seismic Waves</span> - Waves of energy created by earthquakes.</li>
+            <li><span>Richter Scale</span> - Instrument/scale used to measure earthquake magnitude.</li>
+            <li><span>Country Count</span> - 195 countries globally (including Vatican City & Palestine, which are UN
+                non-member observer states).</li>
+            <li><span>Mariana Trench</span> - The deepest known sub-sea abyss (the Mt. Everest of the ocean).</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Seasons & Climate Zones</h6>
+        <ul>
+            <li><span>Four Seasons (WSSA)</span> - Winter (Snow) -> Spring (Leaf growth) -> Summer (Hottest) ->
+                Autumn/Fall (Leaf shedding).</li>
+            <li><span>Climatic Zones</span> - Divided into Polar, Temperate, and Tropic zones. Sub-tropic regions
+                experience four distinct seasons, while Equatorial and Tropical regions predominantly experience two
+                (dry & monsoon).</li>
+            <li><span>India's Climate</span> - India spans across both Tropic and Sub-Tropic zones.</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Unit & Real Estate Conversions</h6>
+        <ul>
+            <li><span>Cricket Pitch / Distance</span> - 22 yards = 20 meters = 65 feet.</li>
+            <li><span>1 Ton</span> - 1,000 kilograms.</li>
+            <li><span>1 Acre</span> - 43,560 square feet (equal to 100 cents).</li>
+            <li><span>1 Cent</span> - 435.6 square feet.</li>
+            <li><span>1 Ground</span> - 2,400 square feet (commonly used in South Indian real estate).</li>
+            <li><span>1 Yard</span> - 0.914 meters.</li>
+            <li><span>1 Foot</span> - 12 inches = 30.48 cm.</li>
+            <li><span>1 Inch</span> - 2.54 cm.</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Fitness & Physical Training</h6>
+        <ul>
+            <li><span>Heavy Bag Weight</span> - Standard heavy bag weight is roughly 1/2 of body weight.</li>
+            <li><span>Ideal Weight Formulas</span> - Male: 50 kg + (2.3 kg per inch over 5 ft); Female: 45 kg + (2.3 kg
+                per inch over 5 ft).</li>
+            <li><span>Gait Dynamics</span> - Walking lands on the heel (back of the foot); running lands on the
+                forefoot/midfoot.</li>
+            <li><span>Hydration Rule</span> - Drink water prior to drinking coffee.</li>
+            <li><span>Strength Phases</span> - Concentric (pushing/contracting), Eccentric (lowering/controlling),
+                Static (holding isometric tension).</li>
+            <li><span>Boxing Defense</span> - Keep both fists up to protect the chin and ribs continuously.</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Human Biology, Health & Metabolism</h6>
+        <ul>
+            <li><span>Science & Medicine</span> - Medicine is a practical branch of science; all medicine is science,
+                but not all science is medicine.</li>
+            <li><span>NEET</span> - National Eligibility cum Entrance Test (entrance exam for medical courses in India).
+            </li>
+            <li><span>Digestive Tract Length</span> - Human digestive tract length is approximately 9 times the length
+                of the human torso.</li>
+            <li><span>Dopamine & Homeostasis</span> - Dopamine is a neurotransmitter driving motivation/reward.
+                Homeostasis is the body's self-regulating mechanism to maintain stable internal states (like 37°C
+                temperature).</li>
+            <li><span>Dopamine Detox</span> - Delay high-dopamine rewards by completing low-dopamine tasks first to
+                reset baseline motivation.</li>
+            <li><span>Serotonin</span> - Key neurotransmitter and hormone regulating sleep, mood, and digestion.</li>
+            <li><span>Caloric Value of Fat</span> - 1 kg of stored body fat equals ~7,700 kcal.</li>
+            <li><span>Daily Caloric Needs</span> - Average human maintenance intake is 2,000–2,500 kcal/day.</li>
+            <li><span>BMR (Basal Metabolic Rate)</span> - Calories burned at complete rest to maintain vital functions.
+                Harris-Benedict formula (Men): <code>(10 × weight_kg) + (6.25 × height_cm) - (5 × age) + 5</code>.</li>
+            <li><span>TDEE (Total Daily Energy Expenditure)</span> - Total calories burned per day =
+                <code>BMR + Exercise + TEF (Digestion)</code>. Active multiplier is ~1.75 × BMR.
+            </li>
+            <li><span>Placebo Effect</span> - Psychological and physical healing response triggered by belief in a
+                treatment despite receiving an inactive substance.</li>
+            <li><span>Breakfast Window</span> - Consume breakfast within 1–2 hours of waking (e.g., before 8 AM if
+                waking at 6 AM) to balance blood sugar and metabolism.</li>
+            <li><span>Dental Care</span> - Root Canal Therapy (RCT) involves removing infected pulp/nerve tissue and
+                sealing it with Gutta-Percha. Cloves (eugenol) provide natural relief and antibacterial properties for
+                gums.</li>
+            <li><span>Infused Water Benefits</span> - Lemon (Immune support), Ginger (Warming effect), Cucumber (Cooling
+                effect).</li>
+            <li><span>Pain Processing</span> - The brain itself lacks pain receptors (nociceptors); headaches stem from
+                surrounding blood vessels, meninges, and tissues, not brain tissue itself.</li>
+            <li><span>Organ-Feature Pairings (Traditional Mapping)</span> - Ears (Kidney), Eyes (Liver), Nose (Lungs),
+                Stomach (Mouth), Heart (Tongue).</li>
+            <li><span>Jaw Mechanics</span> - Carnivores only move jaws vertically (up/down); omnivores/humans move jaws
+                vertically and laterally (side-to-side) for chewing.</li>
+            <li><span>Snake Hearing</span> - Snakes lack external ear structures but detect ground/air vibrations via
+                jawbones connected to inner ear structures.</li>
+            <li><span>Elephant Trait</span> - Elephants are among the few mammals incapable of jumping.</li>
+            <li><span>Medical Imaging</span> - X-Ray (2D high-density bone scan), CT Scan (3D cross-sectional X-ray
+                series for bones/organs), MRI (Magnetic fields/radio waves for detailed soft tissue, ligaments, and
+                brain scanning).</li>
+            <li><span>The 6 Senses</span> - Hearing, Vision, Smell, Taste, Touch, and Proprioception (spatial awareness
+                of body movement without looking).</li>
+            <li><span>Medical Terminology</span> - Disease (specific known etiology), Syndrome (collection of symptoms
+                occurring together without a single cause), Disorder (functional disruption of body processes).</li>
+            <li><span>Empty Nest Syndrome</span> - Psychological grief/loneliness experienced by parents when children
+                leave home.</li>
+            <li><span>Dentures</span> - Prosthetic replacement for missing teeth.</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Psychology Models</h6>
+        <ul>
+            <li><span>IQ (Intelligence Quotient)</span> - Cognitive processing, logic, and memory capacity.</li>
+            <li><span>EQ (Emotional Quotient)</span> - Emotional regulation, self-awareness, and empathy.</li>
+            <li><span>SQ (Social Quotient)</span> - Charisma, networking, and interpersonal communication.</li>
+            <li><span>AQ (Adversity Quotient)</span> - Mental resilience and bounce-back capability during crises.</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Physics & Chemistry</h6>
+        <ul>
+            <li><span>Science Adage</span> - "If it moves it's biology, if it stinks it's chemistry, if it doesn't work
+                it's physics."</li>
+            <li><span>Litmus Test</span> - Chemical pH indicator used to determine whether a solution is acidic or basic
+                (alkaline).</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>First Aid & CPR Protocols</h6>
+        <ul>
+            <li><span>CPR (Cardiopulmonary Resuscitation)</span> - 30 chest compressions to 2 rescue breaths. Use two
+                hands for adults, one hand for children, and two fingers for infants.</li>
+            <li><span>Cardiac Arrest vs. Heart Attack</span> - Cardiac arrest is an electrical rhythm failure; heart
+                attack is a circulatory/vascular blockage. Calf muscles act as a secondary venous pump returning blood
+                to the heart.</li>
+            <li><span>Wound Care</span> - Sterile gauze acts as the primary absorbable layer; Micropore tape secures
+                dressing; Betadine (povidone-iodine) prevents bacterial infection on cuts/burns.</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Electrical & Tech Basics</h6>
+        <ul>
+            <li><span>Energy Formula</span> - <code>Power (kW) × Time (hrs) = Energy (kWh)</code>. 1 kWh = 1 Unit of
+                electricity.</li>
+            <li><span>AC Tonnage Rule</span> - Install 1 Ton of Air Conditioning capacity per 100 square feet of room
+                area.</li>
+            <li><span>CPU Core vs. Thread</span> - Cores represent physical processing units; threads represent
+                execution pipelines per core.</li>
+            <li><span>Clock Speed</span> - 1 GHz = 1 Billion cycles/Hertz per second (3.2 GHz = 3.2 billion instructions
+                per second).</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Geography & Global History</h6>
+        <ul>
+            <li><span>Land Mass Comparisons</span> - China covers ~7% of world land area; India covers ~2.4% (China is
+                roughly 2.8× larger than India).</li>
+            <li><span>Suez Canal</span> - Artificial Egyptian waterway connecting the Mediterranean Sea to the Red Sea.
+            </li>
+            <li><span>Largest Indian States (by area)</span> - 1. Rajasthan, 2. Madhya Pradesh, 3. Maharashtra, 4. Uttar
+                Pradesh.</li>
+            <li><span>Premier Indian Educational Institutes</span> - IIT (Engineering - JEE Entrance); IIM (Management -
+                CAT Entrance). First IIT: IIT Kharagpur (West Bengal).</li>
+            <li><span>Major Indian Rivers</span> - Himalayan (Ganga, Indus, Brahmaputra); Peninsular (Mahanadi,
+                Godavari, Kaveri, Krishna, Narmada).</li>
+            <li><span>Mountain Peaks</span> - Chembra Peak (Wayanad), Mullayanagiri (Karnataka's highest), Mt. Everest
+                (World's highest at 8,848.86 m / ~8.8 km).</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Indian Governance & Legal Concepts</h6>
+        <ul>
+            <li><span>Lawyer vs. Advocate</span> - A Lawyer holds a law degree; an Advocate has cleared the Bar Council
+                of India (BCI) examination and actively practices in court.</li>
+            <li><span>Petitioner vs. Defendant</span> - Petitioner files the legal claim/petition; Defendant is the
+                party accused or responding to the petition.</li>
+            <li><span>IPC Context</span> - The Indian Penal Code (IPC) is a statutory criminal code separate from the
+                Constitution of India.</li>
+            <li><span>IPC Section 159 & 160</span> - Defines Affray (public fighting causing peace disturbance) and its
+                punishment.</li>
+            <li><span>IPC Section 302</span> - Punishment for murder (life imprisonment or death penalty + fine).</li>
+            <li><span>IPC Section 307</span> - Attempt to murder (up to 10 years or life imprisonment + fine).</li>
+            <li><span>IPC Section 405 & 406</span> - Criminal breach of trust and its punishment (up to 3 years
+                imprisonment or fine).</li>
+            <li><span>IPC Section 420</span> - Cheating and dishonestly inducing delivery of property (non-bailable, up
+                to 7 years + fine).</li>
+            <li><span>IPC Section 503 & 504</span> - Criminal intimidation and intentional insult to provoke breach of
+                peace.</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>World Politics & History Highlights</h6>
+        <ul>
+            <li><span>US Presidency</span> - George Washington was the 1st President. Franklin D. Roosevelt served 4
+                terms (1933–1945); the 22nd Amendment (1951) capped service to two terms.</li>
+            <li><span>Storm Systems</span> - Cyclones occur in the Indian Ocean & South Pacific; Tornadoes occur
+                primarily over land in the US & Eastern Pacific.</li>
+            <li><span>British Isles Terminology</span> - England (country) -> Great Britain (England + Wales + Scotland)
+                -> United Kingdom (Great Britain + Northern Ireland) -> British Isles (Geographical archipelago
+                including Britain and all of Ireland).</li>
+            <li><span>WWII Axis Leaders</span> - Benito Mussolini (Italy), Adolf Hitler (Germany), Allied with Japan.
+            </li>
+            <li><span>Zionism vs. Israeli</span> - Zionism is the political/ideological movement for a Jewish homeland;
+                Israeli refers to national citizenship.</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>IELTS & Language Frameworks</h6>
+        <ul>
+            <li><span>IELTS Structure</span> - Tests Reading, Listening, Writing, and Speaking (Scored 0–9 bands; 7.5+
+                is target for top universities).</li>
+            <li><span>CEFR Proficiency Levels</span> - A1 (Starter), A2 (Pre-Intermediate), B1 (Intermediate), B2
+                (Upper-Intermediate), C1 (Advanced), C2 (Proficient).</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Astronomy & Cosmology</h6>
+        <ul>
+            <li><span>Cosmology</span> - The scientific study of the origin, evolution, and eventual fate of the
+                universe.</li>
+            <li><span>Comets</span> - Celestial bodies made of ice, dust, and frozen gases with long dust/gas tails;
+                temperatures average around -70°C to far below freezing.</li>
+            <li><span>Planetary Order</span> - Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune.</li>
+            <li><span>Planetary Superlatives</span> - Jupiter (Largest), Mercury (Smallest), Venus (Hottest), Neptune
+                (Coldest).</li>
+            <li><span>Retrograde Rotation</span> - Venus and Uranus rotate clockwise (opposite to Earth and most other
+                planets).</li>
+            <li><span>Equinoxes & Solstices</span> - Equinoxes (equal day/night): ~March 21 & ~Sept 22. Solstices
+                (longest day/night): ~June 21 & ~Dec 22 (~180 days between events).</li>
+            <li><span>Eclipses</span> - Solar (Moon blocks Sun during day); Lunar (Earth blocks sunlight from reaching
+                Moon at night).</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Investment & Business Fundamentals</h6>
+        <ul>
+            <li><span>Rule of Thumb</span> - Earn more > Save more > Invest average > Spend for needs.</li>
+            <li><span>Inflation</span> - Annual inflation generally runs between 6–10%. For example, a product priced at
+                ₹100 in 2025 can cost ₹110 in subsequent years depending on economic circumstances.</li>
+            <li><span>Demat Account</span> - Short for Dematerialised Account; an electronic account holding securities
+                like shares, bonds, and mutual funds digitally (similar to how a bank account holds cash).</li>
+            <li><span>Multiple Demat Accounts</span> - An individual can open multiple Demat accounts, but maintaining
+                too many can lower net profits due to recurring annual maintenance charges across accounts.</li>
+            <li><span>Government Spending & Taxes</span> - High direct taxation is only part of the equation; government
+                spending is the true tax. There is no unbalanced budget—deficits are paid either through direct taxes,
+                inflation, or debt with interest.</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>PAN vs TAN</h6>
+        <ul>
+            <li><span>PAN (Permanent Account Number)</span> - Used for opening bank accounts and filing personal income
+                tax returns; carries no expiry date.</li>
+            <li><span>TAN (Tax Deduction and Collection Account Number)</span> - Required for businesses and
+                organizations filing TDS/TCS returns; valid for one financial year and requires annual renewal.</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Corporate Accounting & Salary Definitions</h6>
+        <ul>
+            <li><span>Gross CTC</span> - Total Cost to Company before any deductions.</li>
+            <li><span>Net CTC</span> - Actual in-hand salary received after all statutory and tax deductions.</li>
+            <li><span>Zero-Based Budgeting</span> - A budgeting method where every expense must be justified from a zero
+                baseline for each new period, helping companies eliminate trivial spending and focus on non-trivial
+                priorities.</li>
+            <li><span>EBITDA</span> - Earnings Before Interest, Taxes, Depreciation, and Amortization; a key metric
+                showing core operational profitability before non-operating expenses.</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Indian Taxation & Income Tax Terms</h6>
+        <ul>
+            <li><span>Tax Liability</span> - The total legal tax obligation owed by an earner to the government for a
+                given financial year.</li>
+            <li><span>TDS (Tax Deducted at Source)</span> - Tax collected at the point of income generation by the
+                deductor.</li>
+            <li><span>Section 80C</span> - Provision under the Income Tax Act allowing tax deductions up to ₹1.5 Lakh
+                for investments in eligible instruments (e.g., PPF, ELSS, Insurance, FDs/RDs).</li>
+            <li><span>Section 87A</span> - Tax rebate offering relief (up to ₹25,000 under the New Tax Regime) to zero
+                out tax liability for eligible resident individuals.</li>
+            <li><span>Standard Deduction & Rebates</span> - Income levels up to ₹12L–₹12.75L benefit from standard
+                deductions and rebates ensuring zero effective tax liability. Earnings exceeding ₹13L fall into
+                progressive tax slabs.</li>
+            <li><span>Marginal Relief</span> - Tax relief granted when income slightly exceeds a threshold slab,
+                preventing the tax increase from exceeding the extra income earned.</li>
+            <li><span>Form 16</span> - Annual TDS certificate issued by employers detailing salary earned and tax
+                deducted.</li>
+            <li><span>Form 26AS</span> - Consolidated annual tax credit statement on the Income Tax e-filing portal
+                reflecting all TDS, advance tax, and self-assessment tax credited to your PAN.</li>
+            <li><span>ITR-1 (Sahaj)</span> - Income tax return form for resident individuals with income up to ₹50 Lakhs
+                from salary, one house property, and other sources.</li>
+            <li><span>ITR-6</span> - Income tax return form for companies other than those claiming exemption under
+                Section 11.</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Investment Analysis Checklist</h6>
+        <ul>
+            <li><span>NIFTY 500 Evaluation Checklist</span> - Business Model -> Debt Levels -> Cash Flow -> Revenue &
+                Profit Growth (Yearly & Quarterly) -> Operational Costs & Corporate Culture -> Competitive Moat Check.
+            </li>
+            <li><span>Post Office Recurring Deposit (RD)</span> - Low-risk government savings option offering ~6.7%
+                annual interest (e.g., ₹2,000/month = ₹24,000/year yields ~₹25,600 at year 1 end).</li>
+            <li><span>Bonds</span> - Fixed-income securities including Government Bonds (G-Secs, T-Bills) and Corporate
+                Bonds (Secured and Unsecured). Live prices tracked on NSE/BSE capital markets.</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Sales Dynamics & Strategy</h6>
+        <ul>
+            <li><span>Emotional Selling</span> - Add emotional resonance to products when selling rather than pushing
+                hard sales. If a representative or client displays disrespect, escalate officially.</li>
+            <li><span>Rejection in Sales</span> - Expecting 100 "No"s is the cost of securing one "Yes"; cold calling
+                averages around a 2% success rate.</li>
+            <li><span>Product Choice Paradox</span> - Offering excessive product varieties reduces overall sales,
+                whereas offering a curated/limited line drives higher conversion (e.g., Apple model).</li>
+            <li><span>Customer Retention Value</span> - The cost of losing a sale three times equals the long-term
+                impact of losing one loyal customer.</li>
+        </ul>
 
     </div>
 </body>
 <!-- js  -->
 <script src="./aos/aos.js"></script>
+<script src="./search.js"></script>
 <script src="./core.js"></script>
 
 </html>

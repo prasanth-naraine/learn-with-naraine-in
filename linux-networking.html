@@ -59,6 +59,33 @@
         <p>
         </p>
 
+        <h6>
+            Internet
+        </h6>
+        <ul>
+            <li>
+                <span>Restart the NIC or Network Interface Card</span> -> sudo systemctl restart NetworkManager
+            </li>
+            <li>
+                https://fast.com/ -> <span>check speed of the internet</span>
+            </li>
+            <li>
+                8bits = 1Byte
+            </li>
+            <li>
+                70Mbps is 70 Megabits per seconds not MegaBytes
+            </li>
+            <li>
+                70Mbps = 8.75MB per seconds | 100Mbps means 12.5MB/s
+            </li>
+            <li>
+                Plese dont blame the ISP Technicians, blame the Product Owner who confused with these business jargons 
+            </li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+
         <h6>Deadlock</h6>
         <ul>
             <li>4 cars Moves forwards blocked by other car simultaneously -> ABCD</li>
@@ -66,13 +93,22 @@
             <li>Hard System reset is only solution -> but it is a destructive, last-resort remedy</li>
         </ul>
 
+        <!-- divider -->
+        <div class="line"></div>
+
         <h6>
             NoC - Network-on-Chips
         </h6>
 
+        <!-- divider -->
+        <div class="line"></div>
+
         <h6>
             Firewall
         </h6>
+
+        <!-- divider -->
+        <div class="line"></div>
 
         <h6>
             Standard Network Switch vs Industrial Network Switch
@@ -87,6 +123,58 @@
             <li>
                 INS last for 3-5 years whereas INS last for more than 10+ years
             </li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Introduction to Hacking</h6>
+        <ul>
+            <li><span>Hacking Definition</span> - Gaining unauthorized access into a system without the knowledge of the
+                target.</li>
+            <li><span>Are Hackers Criminals?</span> - Yes in India, hackers are generally considered criminals. Hacking
+                has both positive and negative sides, but the negative part is focused on most of the time, leading to
+                lower awareness. Ethical hackers are called Information Security Experts, Cybersecurity Experts, or work
+                in CyberCrime.</li>
+            <li><span>Hacking Types</span> - White hat (defensive), Black hat (offensive), and Grey hat (acting
+                depending on the situation).</li>
+            <li><span>Hacking Cycle</span> - Reconnaissance/spying -> Scan target or deep scanning -> Gain access ->
+                Maintain access using Trojans -> Covering tracks -> Repeat.</li>
+            <li><span>Port Scanning</span> - The process of probing a port to find if it is open, closed, or unknown.
+            </li>
+            <li><span>Trojans</span> - Software that looks legitimate but still receives and shares data with its
+                master.</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Network</h6>
+        <ul>
+            <li><span>Wired Network</span> - The fastest network type in the world.</li>
+            <li><span>Submarine Cable Map</span> - Website (`submarinecablemap.com`) mapping all internet cables laid
+                across the seabed.</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Wine in Linux</h6>
+        <ul>
+            <li><span>Acronym</span> - Wine Is Not an Emulator.</li>
+            <li><span>Purpose</span> - Helps in running Windows applications on Linux and macOS.</li>
+            <li><span>Installation & Version</span> - <code>sudo apt update && sudo apt install wine</code>, followed by
+                checking version with <code>wine --version</code> (e.g., 6.0.3).</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Scanning & Information Gathering</h6>
+        <ul>
+            <li><span>Gather Information</span> - Use `nmap` to scan and find open ports and services.</li>
+            <li><span>Scan the Target</span> - Use `nikto` to check for web vulnerabilities.</li>
+            <li><span>Get Subdomains and DNS</span> - Use `amass` (OWASP) to keep records of subdomains.</li>
+            <li><span>Analyze Vulnerabilities</span> - Use `sqlmap` to test and exploit SQL injection.</li>
+            <li><span>Exploit Vulnerabilities</span> - Use `metasploit` or `armitage`.</li>
+            <li><span>Perform Forensic Analysis</span> - Use `autopsy` or `hashcat`.</li>
+            <li><span>Generate Reports</span> - Use `Dradis` or `metagoofil`.</li>
         </ul>
 
     </div>

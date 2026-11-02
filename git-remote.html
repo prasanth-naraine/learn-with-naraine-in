@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Git - DVCS</title>
+    <title>Git, Remote, IDE</title>
 
     <!-- Favicon -->
     <link rel="icon" href="https://img.icons8.com/emoji/150/books-emoji.png" />
@@ -53,28 +53,116 @@
 
     <div class="info-section-common">
         <h1>
-            Git
+            Git, IDE, Remote
         </h1>
 
-        <p>
-            Git is a <span>tool</span>, not a language.
-        </p>
-
-        <img src="./git/git-1.jpg" alt="">
-
+        <h6>Git Overview</h6>
         <ul>
-            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, libero.</li>
-            <li>Lorem ipsum dolor, <span>sit amet consectetur adipisicing elit.</span> Esse, libero.</li>
-            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, libero.</li>
-            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, libero.</li>
-            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, libero.</li>
+            <li><span>Git Definition</span> - A version control tool that manages & stores different versions of files
+                and code. It helps you work with others, track who did what, easily find the culprit, and undo mistakes.
+            </li>
+            <li><span>Creator</span> - Developed by Linus Torvalds, the legend who also created the Linux operating
+                system.</li>
+            <li><span>Local Scope</span> - Git works on your machine locally.</li>
+            <li><span>Remote Repositories</span> - You can also use remote platforms like GitHub, GitLab, or Bitbucket
+                to share your work.</li>
         </ul>
 
-        <h6>
-            Subheading
-        </h6>
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Installation</h6>
+        <ul>
+            <li><span>Check Version</span> - Open terminal and run: <code>git --version</code></li>
+            <li><span>Install on Ubuntu/Debian</span> - Run: <code>sudo apt install git</code></li>
+        </ul>
 
-        <img src="./git/git-2.png" alt="">
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Personal Access Token (PAT)</h6>
+        <ul>
+            <li><span>Commit Tracking</span> - GitHub stores each commit associated with specific timestamps.</li>
+            <li><span>Repository Setup</span> - Create a new private repository in your GitHub account.</li>
+            <li><span>Authentication</span> - Personal Access Token (PAT) used for secure command-line authentication
+                with GitHub.</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Git Commands</h6>
+        <ul>
+            <li><span>git init</span> - Initializes a new local repository.</li>
+            <li><span>git clone</span> - Copies an existing remote repository to your local machine.</li>
+            <li><span>git status</span> - Shows the status of your workspace and staging area.</li>
+            <li><span>git add</span> - Adds changes to the staging area.</li>
+            <li><span>git commit</span> - Commits the staged changes to the local repository.</li>
+            <li><span>git push</span> - Pushes commits from your local repository to a remote repository.</li>
+            <li><span>git pull</span> - Fetches and merges changes from a remote repository into your local branch.</li>
+            <li><span>git branch</span> - Manages branches in your repository.</li>
+            <li><span>git checkout</span> - Switches between branches or commits.</li>
+            <li><span>git merge</span> - Merges changes from one branch into another.</li>
+            <li><span>git diff</span> - Shows differences between commits, branches, or files.</li>
+            <li><span>git log</span> - Displays a history of commits, including authors and dates.</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Vs code Installation</h6>
+        <ul>
+            <li><span>VS Code Snap Install</span> - sudo snap install code --classic</li>
+            <li><span>Check Version</span> - code --version</li>
+            <li>
+                Visual Studio Code (VS Code) is developed and owned by <span>Microsoft</span>.
+            </li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Vs code Extensions</h6>
+        <ul>
+            <li><span>Figure Extension Install</span> - Command Palette > Type "New Figure Sketch" and select it > Start
+                drawing!</li>
+            <li><span>Live Server Install</span> - Code > Alt + L + O > Initialize Live Server.</li>
+        </ul>
+
+        <!-- divider -->
+        <div class="line"></div>
+        <h6>Vs code Customization</h6>
+        <ul>
+            <li><span>Command Palette Shortcut</span> - Ctrl + Shift + P to open the Command Palette, then search for
+                `settings.json` (workspace option) to edit configurations.</li>
+
+            <li>
+                The below code should be in json key-value pair one after other ->
+                <pre>
+{ 
+    "files.autoSave": "afterDelay" , 
+    "workbench.colorTheme": "Default Light Modern" 
+}               </pre>
+            </li>
+            <li><span>Color Theme</span> - "workbench.colorTheme": "Default Light Modern" (Default theme).</li>
+            <li><span>Auto Save</span> - "files.autoSave": "afterDelay" (Automatically saves files after a delay).</li>
+            <li><span>Activity Bar Location</span> - "workbench.activityBar.location": "bottom" (Moves the sidebar
+                placement to the bottom).</li>
+            <li><span>Editor Tabs</span> - "workbench.editor.showTabs": "multiple" (Controls how many files can be shown
+                with tabs).</li>
+            <li><span>Status Bar</span> - "workbench.statusBar.visible": false (Hides bottom row with go-live server
+                status).</li>
+            <li><span>Startup Editor</span> - "workbench.startupEditor": "none" (Defines how the startup editor looks).
+            </li>
+            <li><span>Tips Disabled</span> - "workbench.tips.enabled": false (Disables startup tips).</li>
+            <li><span>Minimap</span> - "editor.minimap.enabled": false (Hides side code preview length).</li>
+            <li><span>Breadcrumbs</span> - "breadcrumbs.enabled": false (Hides file heading breadcrumbs).</li>
+            <li><span>Font Weight</span> - "editor.fontWeight": "800" (Sets font thickness).</li>
+            <li><span>Font Family</span> - "editor.fontFamily": "Tlwg Mono" (Sets the font typeface).</li>
+            <li><span>Font Size</span> - "editor.fontSize": 13 (Sets font size in pixels).</li>
+            <li><span>Secondary Side Bar</span> - "workbench.secondarySideBar.defaultVisibility": "hidden" (Hides
+                secondary sidebar by default).</li>
+            <li><span>Format on Paste</span> - "editor.formatOnPaste": true (Automatically formats code when pasted).
+            </li>
+            <li><span>Format on Save</span> - "editor.formatOnSave": true (Automatically formats code when saved).</li>
+            <li><span>Extension Auto-Update</span> - "extensions.autoUpdate": false (Disables automatic extension
+                updates).</li>
+        </ul>
 
     </div>
 </body>
