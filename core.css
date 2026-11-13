@@ -182,7 +182,7 @@ body {
 }
 
 .info-section-common p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 .info-section-common ul {
@@ -219,7 +219,7 @@ body {
 
     .info-section-common p,
     .info-section-common ul li {
-        font-size: 1.25rem;
+        font-size: 1.15rem;
     }
 
     .info-section-common h1 {
@@ -386,6 +386,7 @@ mark.highlight.active {
     gap: 8px;
     align-items: center;
     z-index: 1000;
+    display: none;
 }
 
 .search-container input {

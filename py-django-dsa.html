@@ -53,7 +53,7 @@
 
     <div class="info-section-common">
         <h1>
-            Hardwares
+            Installations
         </h1>
 
         <p>
@@ -67,7 +67,7 @@
                 Python 3.0 released on 03-12-2008 which is around 18 years
             </li>
             <li>
-                sudo apt install python3 && python3 --version or -V
+                sudo apt install python3 -y && python3 --version or -V
             </li>
             <li>
                 Latest Apt stable Version is Python 3.12.3 [as of 30-10-2026]
@@ -77,6 +77,9 @@
                 X.12.X - Minor Releases or Feature release within the major version
                 <br>
                 X.X.3 - Patch release or bug fix release inside the minor release
+            </li>
+            <li>
+                Python 3 comes pre-installed on all modern versions of Ubuntu.
             </li>
             <li>
                 sudo apt install python3-pip python3-venv -y
@@ -117,10 +120,12 @@
 
         <ul>
             <li>
-                 python3 -m pip install django && pip show django | Installing django
+                python3 -m pip install django && pip show django | Installing django project specific | don't install
+                django globally
             </li>
             <li>
-                pip freeze -> Generating environment snapshots (requirements.txt) | package==version | pip install -r requirements.txt -> we can install multiple package inside a single file
+                pip freeze -> Generating environment snapshots (requirements.txt) | package==version | pip install -r
+                requirements.txt -> we can install multiple package inside a single file
             </li>
             <li>
                 pip list -> just printing the installed packages inside terminal
@@ -131,15 +136,136 @@
 
         <ul>
             <li>
-                django-admin startproject be . | create an admin backend  
+                django-admin startproject be . | create an admin backend
             </li>
             <li>
-                create a requirements.txt file inside /lms/be | list all packages==version format inside requirements.txt file
+                create a requirements.txt file inside /lms/be | list all packages==version format inside
+                requirements.txt file
             </li>
             <li>
                 if venv is activated no need to type python3 -m => pip install -r requirements.txt
             </li>
         </ul>
+
+        <h6>
+            Java Installation
+        </h6>
+        <ul>
+            <li> sudo apt install default-jdk -y</li>
+            <li>
+                java -version | runtime version
+            </li>
+            <li>
+                javac -version | compiler version
+            </li>
+            <li>
+                21.0.13.0.3 - lts version
+            </li>
+            <li>
+                Release Date - October 24, 2026
+            </li>
+            <li>
+                Java is not preinstalled with ubuntu like python3
+            </li>
+        </ul>
+
+
+        <h6>
+            C C++
+        </h6>
+        <ul>
+            <li>sudo apt install build-essential gdb -y</li>
+            <li>GNU Compiler & GNU Debugger</li>
+            <li>gcc --version</li>
+            <li>g++ --version</li>
+            <li>gdb --version | Debugger</li>
+        </ul>
+
+        <h1>
+            Theory
+        </h1>
+
+        <h6>
+            Python
+        </h6>
+        <ul>
+            <li>Author & Designed by - <span>Guido Van Rossum</span> - Dutch Developer - 1991 - Maintained by Python
+                Software Foundation</li>
+            <li>
+                Areas of use - Web development, Data Science, AI, Automation,
+            </li>
+            <li>
+                Simple & Powerful Programming Language
+            </li>
+            <li>
+                It uses character set to form token like keywords, literals, identifiers and operators
+            </li>
+            <li>
+                What is character set - A_Z | a_z | 0_9 | +-()*&^%$#@!~ | ASCII UNICODE | \t tab \n newline \r retruns
+            </li>
+            <li>
+                Russia123@!? - 6 letters | 3 numbers | one word | 12 characters | 3 symbols
+            </li>
+            <li>
+                Alphabets, Numbers, Symbols, Universal Charcater Types, White spaces
+            </li>
+        </ul>
+
+        <h6>
+            Python Tokens
+        </h6>
+        <ul>
+            <li>
+                1. Token - Lexical Unit - small unit of any programming langauge
+            </li>
+            <li>
+                Identifiers - name used by the developer to identify a variable, function, other entity - no length
+                limit for identifiers but make it more descriptive to understand during the time of debugging
+                <br>
+                Animal_function - capital | _SUM | name_1 | function_feature_valid | animal | accepted
+                <br>
+                1_animal | global keywords reserved-words | num^1 name@_symbols_1 symbols | not allowed
+            </li>
+            <li>
+                Keywords - predefined reserved words - specific reasons & meanings
+            </li>
+            <li>
+                global | class | break | for | in | while | print
+            </li>
+            <li>
+                Literals = Constants | Fixed value directly into python code | Fixed value may not alter during program
+                execution
+            </li>
+            <li>
+                Numeric Literals | +- values included
+            </li>
+            <li>
+                Integer | 20 -15 0 | No decimal
+            </li>
+            <li>
+                Floating Point | 3.15 -15 2.0 
+            </li>
+            <li>
+                Complex | real imaginary values | 3+2j | The mathematical value of the imaginary number i is defined as the principal square root of -1.
+            </li>
+            <li>
+                String Literals | 
+            </li>
+            <li>
+                Boolean Literals | True1 False0 | Comparison & decision making statements
+            </li>
+            <li>
+                Operators | Used to perform mathematical or logical Operations 
+            </li>
+            <li>
+                Special Literal | None | define a field which is not created
+            </li>
+            <li>
+                Literals Collections | creates multiple values in single object |  List ordered+Mutable | Tuple Ordered+Immutable | Dictionary Key-value-pair | Set Unordered-Collections
+            </li>
+        </ul>
+
+        <img src="./py/py3.png" alt="">
 
     </div>
 </body>

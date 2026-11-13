@@ -70,6 +70,83 @@
             </li>
         </ul>
 
+        <h6>
+            Nodejs
+        </h6>
+        <ul>
+            <li>
+                sudo apt install nodejs && sudo apt install npm | Not a recommended way
+            </li>
+            <li>
+                Install using NVM [Node version manager] | recommended way
+            </li>
+            <li>
+                sudo apt update-upgrade -y
+            </li>
+            <li>
+                sudo apt install curl -y | client URL
+            </li>
+            <li>
+                curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.41.0/install.sh | bash
+                # Verify npm version:
+            </li>
+            <li>
+                \. "$HOME/.nvm/nvm.sh"
+            </li>
+            <li>
+                nvm install 26
+            </li>
+            <li>
+                node -v # Should print "v26.13.1".
+            </li>
+            <li>
+                npm -v # Should print "11.20.0".
+            </li>
+            <li>
+                Best trick is type nvm install 22/24/26 - it automatically install the desired version asked also change
+                npm-npx versions
+            </li>
+            <li>
+                26.13.1 node version has 11.20.0 npm-npx version | 24.22.3 node version has 11.19.1 npm-npx version |
+                Easy switch between versions
+            </li>
+        </ul>
+
+        <h6>
+            Expressjs
+        </h6>
+        <ul>
+            <li>
+                npm install express mongodb cors dotenv | not a global installation | project specific installation
+            </li>
+            <li>
+                Expressjs handles api endpoints
+            </li>
+            <li>
+                Cors securely talks to backend from frontend
+            </li>
+            <li>
+                dotenv protects the credentials & port numbers
+            </li>
+        </ul>
+
+        <h6>
+            Angular
+        </h6>
+        <ul>
+            <li>
+                npm install -g @angular/cli | global installation
+            </li>
+            <li>
+                npm install -g npm@12.2.2 | npm lts suggested version to upgrade
+            </li>
+            <li>
+                ng version 
+            </li>
+        </ul>
+
+        <img src="./js/ng.png" alt="">
+
     </div>
 </body>
 <!-- js  -->
